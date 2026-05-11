@@ -1,0 +1,61 @@
+.match-card {
+    background-color: #628141;
+    padding: 15px;
+    border-radius: 10px;
+    color: #EBD5AB;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.match-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.match-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.match-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.match-competition {
+    color: #dcdcdc;
+    font-size: 13px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.match-video iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+}
+
+.match-card:hover .match-video iframe {
+    transform: scale(1.03);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.match-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
