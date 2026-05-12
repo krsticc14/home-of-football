@@ -1,6 +1,9 @@
 import "./MatchCard.css";
 
 function MatchCard({ match }) {
+
+  const safeVideo = match.video?.replace("http://", "https://");
+
   return (
     <div className="match-card">
       <h3 className="match-title">{match.title}</h3>
@@ -8,7 +11,7 @@ function MatchCard({ match }) {
 
       <div
         className="match-video"
-        dangerouslySetInnerHTML={{ __html: match.video }}
+        dangerouslySetInnerHTML={{ __html: safeVideo }}
       />
     </div>
   );
