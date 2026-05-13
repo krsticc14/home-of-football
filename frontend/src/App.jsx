@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getHighlights();
+        const data = await getHighlights();
         setMatches(data);
       } catch (err) {
         console.error(err);
