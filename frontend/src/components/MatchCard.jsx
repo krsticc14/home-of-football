@@ -6,18 +6,10 @@ function MatchCard({ match }) {
       <h3 className="match-title">{match.title}</h3>
       <p className="match-competition">{match.competition?.name}</p>
 
-      <img 
-      src={match.thumbnail}
-      alt={match.title}
-      className="match-thumbnail"
+      <div 
+      className="match-video"
+      dangerouslySetInnerHTML={{__html: match.video}}
       />
-
-      <a 
-      href={match.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="watch-button"
-      > Watch Highlights</a>
     </div>
   );
 }
