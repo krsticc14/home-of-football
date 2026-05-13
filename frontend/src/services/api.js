@@ -1,7 +1,14 @@
-import axios from "axios";
+const BASE_URL = "https://www.scorebat.com/video-api/v1/";
 
-const API = axios.create({
-    baseURL: "http://localhost:5000/api",
-});
+export const getHighlights = async () => {
+    const response = await fetch(BASE_URL);
+    const data = await repsonse.json();
 
-export const getHighlights = () => API.get("/highlights");
+    return data.map(match => ({
+        title: match.title,
+        competition: match.competition,
+        date: match.date,
+        thumbnail: match.thumbnail,
+        video: match.videos?.[0]?.embed
+    }));
+};

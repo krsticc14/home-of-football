@@ -15,9 +15,9 @@ function App() {
     const fetchData = async () => {
       try {
         const res = await getHighlights();
-        setMatches(res.data);
+        setMatches(data);
       } catch (err) {
-        console.error(error);
+        console.error(err);
       }
     };
 
