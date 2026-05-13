@@ -2,7 +2,7 @@ const BASE_URL = "https://www.scorebat.com/video-api/v1/";
 
 export const getHighlights = async () => {
     const response = await fetch(BASE_URL);
-    const data = await repsonse.json();
+    const data = await response.json();
 
     return data.map(match => ({
         title: match.title,
